@@ -1,0 +1,53 @@
+.rotating-logo {
+    animation: rotate3d 5s infinite linear;
+    transform-style: preserve-3d;
+}
+
+@keyframes rotate3d {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent */
+    z-index: 5; /* Ensure it's above other content */
+    padding: 0;
+}
+
+/* Navbar container adjustments */
+.navbar .navbar-container {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Spacing for the menu items */
+.navbar ul {
+    display: flex;
+    gap: 4.5rem; /* Adds space between each list item */
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+/* Menu item styles */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
