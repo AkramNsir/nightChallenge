@@ -14,28 +14,30 @@
         transform: rotateX(360deg) rotateY(360deg);
     }
 }
-
 .navbar {
     position: fixed;
-    top: 0;
+    
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent */
-    z-index: 5; /* Ensure it's above other content */
+    background: linear-gradient(to bottom, #1E3A8A, transparent);
+    z-index: 10; /* Ensure it's above other content */
     padding: 0;
 }
 
 /* Navbar container adjustments */
-.navbar .navbar-container {
-    padding: 0 1rem;
+ .navbar-container {
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    width:101%;
+
+   
 }
 
 /* Spacing for the menu items */
 .navbar ul {
     display: flex;
-    gap: 4.5rem; /* Adds space between each list item */
+    gap:2rem;
+    justify-content:flex-end; /* Adds space between each list item */
 }
 
 .navbar ul li {

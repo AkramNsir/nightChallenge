@@ -1,0 +1,35 @@
+.container-fluid {
+    padding: 150px 50px; /* Adjust the padding to apply more control */
+    background-color: black;
+}
+
+/* You can add a specific margin-top to ensure there's space */
+.container-fluid .row:first-child {
+    margin-top: 200px; /* Adds space above the first row */
+}
+.mission{
+    padding:20px 150px;;
+}
+
+
+.rotate{
+	width: 300px;
+	height: 300px;
+	transform: rotateY(36deg);
+	animation: rotateAnimation 5s linear infinite;
+}
+
+@keyframes rotateAnimation {
+	from {transform: rotateY(45deg);}
+	to {transform: rotateY(225deg);}
+}
+
+h4,p{
+    color:white;
+}
+h4{
+    font-size:35px;
+}
+p{
+    font-size:20px;
+}
