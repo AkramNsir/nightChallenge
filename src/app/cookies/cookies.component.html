@@ -1,0 +1,33 @@
+
+
+<div *ngIf="!showCongrats && showPopup"  id="cookie-nightmare" class="cookie-popup" [style.top]="positionTop" [style.left]="positionLeft">
+    <p>
+      Acceptez-vous les cookies ? 
+      <span *ngIf="rejectClickCount < maxRejectAttempts">
+      </span>
+    </p>
+    <button (click)="acceptCookies()">Accepter</button>
+    <button 
+      (mouseover)="moveRejectButton()" 
+      (click)="rejectCookies()">Rejeter</button>
+  </div>
+  <div 
+  *ngFor="let fakePopup of fakePopups" 
+  class="cookie-popup fake-popup"
+  [style.top]="fakePopup.top"
+  [style.left]="fakePopup.left"
+>
+  <p>Acceptez-vous les cookies ?</p>
+  <button (click)="acceptFakeCookie(fakePopup.id)">Accepter</button>
+  <button (click)="rejectFakePopup(fakePopup.id)">Reject</button>
+</div>
+
+  <div *ngIf="showCongrats" id="congrats-container" class="congrats-container">
+    <img src="assets/congrats.png" alt="Congrats" class="congrats-image" />
+    <p>Congrats! You have successfully rejected the cookies! 🎉</p>
+  </div>
+  
+  <div id="fish-group" *ngIf="showFishGroup" class="fish-container">
+    <img *ngFor="let fish of fishes" src="assets/poisson.png" alt="Poisson" class="fish" />
+  </div>
+  

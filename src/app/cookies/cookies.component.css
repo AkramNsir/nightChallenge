@@ -1,0 +1,174 @@
+/* Popup styling */
+.cookie-popup {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  text-align: center;
+  transition: all 0.3s ease-in-out; /* Smooth popup movement */
+}
+
+/* Button styles */
+.cookie-popup button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.cookie-popup button:hover {
+  background-color: #0056b3;
+}
+
+/* Congrats container */
+.congrats-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 130, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  animation: zoomInOut 1.5s infinite; /* Add animation for zoom in and out */
+}
+
+.congrats-container img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Fish container (centered on page) */
+.fish-container {
+    position: fixed;
+    top: 50%;
+    left: -200px; /* Start from outside the left side */
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
+    animation: swim 5s linear forwards; /* Fish swim and disappear after animation */
+    z-index: 9999;
+  }
+  
+  /* Individual fish */
+  .fish {
+    width: 100px; /* Increase fish size */
+    height: auto;
+    animation: fishZoom 3s infinite; /* Add zoom animation for individual fish */
+  }
+  
+  /* Fish animation (from left to right) */
+  @keyframes swim {
+    from {
+      left: -400px; /* Start from outside the left viewport */
+    }
+    to {
+      left: 100%; /* End outside the right viewport */
+    }
+  }
+  
+  /* Fish zoom animation */
+  @keyframes fishZoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  /* Base popup styling */
+.cookie-popup {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Fake popup */
+  .fake-popup {
+    opacity: 1; /* Same as real popups */
+  }
+  
+  /* Button styles */
+  .cookie-popup button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .cookie-popup button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Congrats container */
+  .congrats-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 130, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    animation: zoomInOut 1.5s infinite;
+  }
+  
+  .congrats-container img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes zoomInOut {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  

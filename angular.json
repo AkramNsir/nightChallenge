@@ -30,8 +30,7 @@
          ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
-              "node_modules/flowbite/dist/flowbite.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
             ]
           },
           "configurations": {
@@ -97,7 +96,6 @@
 
             ],
             "scripts": [
-              "node_modules/flowbite/dist/flowbite.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
 

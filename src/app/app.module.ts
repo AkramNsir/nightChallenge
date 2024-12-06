@@ -1,32 +1,35 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common'; // Import CommonModule
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { LoginComponent } from './login/login.component';
-
+import { SimPageComponent } from './sim-page/sim-page.component';
+import { CookiesComponent } from './cookies/cookies.component';
+import { FunFactsComponent } from './fun-facts/fun-facts.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { GuidePopComponent } from './guide-pop/guide-pop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
-    
     NavbarComponent,
-         SignUpComponent,
-         LoginComponent
+    SimPageComponent,
+    CookiesComponent,
+    FunFactsComponent,
+    QuizComponent,
+    GuidePopComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule, // Add CommonModule here
+    AppRoutingModule,
   ],
   providers: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],  // Add this line
-
-  bootstrap: [AppComponent]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

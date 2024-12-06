@@ -1,0 +1,52 @@
+
+<div class="container-fluid py-5">
+    
+    <div class="card shadow-lg p-4 bg-light">
+        
+      <div class="text-center mb-4">
+        <br/><br/><br/><br/><br/>
+
+        <h3 class="fw-bold" style="text-align: center;">Humans and Oceans Quiz</h3>
+        <p>Question {{ currentQuestion + 1 }} of {{ questions.length }}</p>
+      </div>
+  
+      <div *ngIf="!quizOver">
+        <div class="mb-4">
+          <h5 class="text-primary" style="text-align: center;">{{ questions[currentQuestion].question }}</h5>
+        </div>
+  
+        <form>
+          <div class="list-group">
+            <div
+              *ngFor="let option of questions[currentQuestion].options; let i = index"
+              class="list-group-item list-group-item-action answer-option"
+              [ngClass]="{
+                'bg-success text-white': selectedAnswer === true && option.isCorrect,
+                'bg-danger text-white': selectedAnswer === false && !option.isCorrect
+              }"
+              (click)="checkAnswer(option.isCorrect)"
+            >
+              {{ option.text }}
+            </div>
+          </div>
+        </form>
+  
+        <div class="mt-4 text-end">
+          <button
+            class="btn btn-primary"
+            [disabled]="!selectedAnswer"
+            (click)="nextQuestion()"
+          >
+            {{ currentQuestion + 1 === questions.length ? 'Finish' : 'Next' }}
+          </button>
+        </div>
+      </div>
+  
+      <div *ngIf="quizOver" class="text-center mt-4">
+        <h2 class="text-success">Quiz Completed!</h2>
+        <p class="fs-5">Your Score: {{ score }}/{{ questions.length }}</p>
+        <button class="btn btn-warning mt-3" (click)="restartQuiz()">Restart Quiz</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginComponent } from './login.component';
+import { GuidePopComponent } from './guide-pop.component';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+describe('GuidePopComponent', () => {
+  let component: GuidePopComponent;
+  let fixture: ComponentFixture<GuidePopComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LoginComponent]
+      declarations: [GuidePopComponent]
     });
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(GuidePopComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

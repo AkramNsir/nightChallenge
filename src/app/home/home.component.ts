@@ -11,7 +11,7 @@ export class HomeComponent {
   }
 
   navigateTo(){
-    this.router.navigate(['login']);
+    this.router.navigate(['simpage']);
   }
 
 }

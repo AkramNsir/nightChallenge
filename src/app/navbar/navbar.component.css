@@ -18,9 +18,17 @@
     position: fixed;
     
     width: 100%;
-    background: linear-gradient(to bottom, #1E3A8A, transparent);
-    z-index: 10; /* Ensure it's above other content */
-    padding: 0;
+    background: linear-gradient(to bottom, #1d3a8a, transparent);
+    z-index: 10; 
+    
+}
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color:#152c62; /* Updated background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
 }
 
 /* Navbar container adjustments */
@@ -53,3 +61,7 @@
     transition: background-color 0.3s ease;
 }
 
+.logo{
+    width:100px;
+    height:80px;
+}
