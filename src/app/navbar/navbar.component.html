@@ -25,10 +25,36 @@
                     <a href="/quiz" class="block py-2 px-3 text-white rounded hover:bg-blue-700 md:hover:bg-blue-700 active:bg-blue-800 focus:bg-blue-800">Quiz</a>
                 </li>
                 <li>
-                    <a href="#contact" class="block py-2 px-3 text-white rounded hover:bg-blue-700 md:hover:bg-blue-700 active:bg-gray-800 focus:bg-gray-800">Podcasts</a>
+                    <a href="https://badui-8033f.web.app/" class="block py-2 px-3 text-white rounded hover:bg-blue-700 md:hover:bg-blue-700 active:bg-gray-800 focus:bg-gray-800">Bad UI Challenge</a>
                 </li>
             </ul>
         </div>
   
     </div>
 </nav>
+<div *ngIf="showPopup" class="fixed top-20 right-0 mt-16 mr-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 z-30 max-w-sm">
+    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+        <svg
+          class="animate-bounce w-6 h-6 text-blue-500"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </div>
+    
+    <div class="flex justify-between items-center">
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Bad UI Challenge</h3>
+      <button (click)="closePopup()" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+        ✖
+      </button>
+    </div>
+    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+      Check out our latest project in the challenge Bad UI Challenge .
+    </p>
+    <a href="https://badui-8033f.web.app/" class="inline-block mt-4 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
+      Visit the Website
+    </a>
+  </div>

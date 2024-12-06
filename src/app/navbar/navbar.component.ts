@@ -12,4 +12,16 @@ export class NavbarComponent {
   onWindowScroll() {
     this.isScrolled = window.scrollY > 80;
   }
+  showPopup: boolean = true;
+
+  ngOnInit(): void {
+    // Automatically close the popup after 10 seconds
+    setTimeout(() => {
+      this.showPopup = false;
+    }, 10000);
+  }
+
+  closePopup(): void {
+    this.showPopup = false;
+  }
 }
